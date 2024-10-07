@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Craft - Programación de Páginas Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .service-item {
+            margin: 20px auto;
+            display: block;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .cta-button {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>Code Craft</h1>
+        <p>Programación de páginas web gratis y mantenimiento por solo $20 al mes.</p>
+        <a href="#contact" class="cta-button">Contáctanos</a>
+    </header>
+
+    <section id="services">
+        <h2>Servicios</h2>
+        <div class="service-item">
+            <h3>Programación de Páginas Web</h3>
+            <p>Programamos páginas web gratis con un mantenimiento de 20 dólares al mes. Su página web estará lista en menos de 2 horas.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form action="mailto:codecraft@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Descripción del Proyecto:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+        <p>Teléfono: <a href="tel:+526671424038">867-142-4038</a></p>
+        <p>Correo: <a href="mailto:codecraft@gmail.com">codecraft@gmail.com</a></p>
+        <a href="https://wa.me/526671424038" class="whatsapp-button" target="_blank">Contáctanos por WhatsApp</a>
+    </section>
+
+    <section id="testimonials">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <blockquote>"El servicio de Code Craft fue excelente, programaron mi sitio web en tiempo récord y el mantenimiento ha sido impecable."</blockquote>
+        <cite>- Juan Pérez, Emprendedor</cite>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Code Craft. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
