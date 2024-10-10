@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Craft - Programación de Páginas Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #e68a00;
+        }
+
+        header h1 {
+            margin: 10px 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 5px 0 20px;
+        }
+
+        .cta-button {
+            background-color: #ff9800;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e68a00;
+        }
+
+        /* Estilo de las secciones */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: white;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        blockquote {
+            font-style: italic;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        cite {
+            display: block;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            blockquote {
+                font-size: 20px;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="index2.html">Servicios</a></li>
+                <li><a href="index1.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>Code Craft</h1>
+        <p>Programación de páginas web.</p>
+        <a href="#contact" class="cta-button">Contáctanos</a>
+    </header>
+
+    <section id="services">
+        <h2>Nosotros</h2>
+        <div class="service-item">  
+            <h3>Programación de Páginas Web</h3>
+            <p>Buscamos su beneficio sobre todo le damos todas las opciones para que su sueño llegue más lejos.</p>
+        </div>
+    </section>
+    
+    <section id="testimonials">
+        <h2>Nuestra ideología</h2>
+        <blockquote>"Queremos el mejor servicio al mejor precio para todos"</blockquote>
+        <cite>- Juan Pérez, Emprendedor</cite>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Code Craft. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes de Precios</title>
+    <style>
+        /* Tu CSS permanece igual */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #4CAF50;
+            padding: 15px 0;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                top: -50px;
+                opacity: 0;
+            }
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        header nav a {
+            margin: 0 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header nav a:hover {
+            background-color: #45a049;
+            color: #fff8dc;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        /* Título */
+        h1 {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 36px;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Estilo de la tabla */
+        table {
+            width: 40%;
+            margin: 0px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scale(0.9);
+            animation: zoomIn 0.6s forwards;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0.5;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-size: 18px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Blackwhole estilo especial */
+        th.blackwhole {
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px #410303;
+            }
+            to {
+                box-shadow: 0 0 40px #530101;
+            }
+        }
+
+        /* Popular destacado */
+        th.highlight {
+            background-color: #ff9800;
+            color: white;
+            font-size: 18px;
+            position: relative;
+        }
+
+        th.highlight::after {
+            content: 'Popular';
+            position: absolute;
+            top: -15px;
+            right: 10px;
+            background-color: #e67e22;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 10px;
+        }
+
+        .highlight {
+            background-color: #ffe0b2;
+            transition: background-color 0.3s ease;
+        }
+
+        tr:hover .highlight {
+            background-color: #ffcc80;
+        }
+
+        /* Botones */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.6s ease;
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+        }
+
+        button:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* Transiciones y sombras */
+        table, th, td {
+            transition: all 0.3s ease;
+        }
+
+        table:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo responsive */
+        @media (max-width: 768px) {
+            table, th, td {
+                font-size: 14px;
+                padding: 15px;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado con opciones de navegación -->
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index2.html">Servicios</a>
+            <a href="index1.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Título de la página -->
+    <h1>Planes de Precios</h1>
+
+    <!-- Tabla de planes -->
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th class="blackwhole">especial</th>
+                <th class="highlight">Popular</th>
+                <th>Limitado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Precio</td>
+                <td>20 USD/mes</td>
+                <td class="highlight">10 USD/mes</td>
+                <td>6 USD/mes</td>
+            </tr>
+            <tr>
+                <td>Dominio personalizado</td>
+                <td>Unico+</td>
+                <td class="highlight">&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td>Página totalmente al gusto</td>
+                <td>&#10004;</td>
+                <td class="highlight">&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td>Eliminación de la marca</td>
+                <td>&#10004;</td>
+                <td class="highlight">&#10004;</td>
+                <td>---</td>
+            </tr>
+            <tr>
+                <td>Seguridad del sitio web (SSL)</td>
+                <td>&#10004;++  </td>
+                <td class="highlight">&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td>Funciones Agregadas</td>
+                <td>Ilimitado</td>
+                <td class="highlight">10</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Registro de Visitas</td>
+                <td>&#10004;</td>
+                <td class="highlight">---</td>
+                <td>---</td>
+            </tr>
+            <tr>
+                <td>Cambios de web Gratis</td>
+                <td>10</td>
+                <td class="highlight">5</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Atención al Cliente</td>
+                <td>Prioritaria 24/7</td>
+                <td class="highlight">Normal</td>
+                <td>Sin prioridad</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onclick="window.location.href='https://wa.me/526671424038'">Elegir Blackwhole</button></td>
+                <td class="highlight"><button onclick="window.location.href='https://wa.me/526671424038'">Elegir Popular</button></td>
+                <td><button onclick="window.location.href='https://wa.me/526671424038'">Elegir Limitado</button></td>
